@@ -4,7 +4,7 @@ import styles from "styled-components";
 
 export default function Character({ name, status, species, img }) {
   const Main = styles.div`
-    width: 25%;
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,13 +13,10 @@ export default function Character({ name, status, species, img }) {
     flex-flow: column nowrap; 
     border-radius: 10px;
     margin: 2% 1%;
-    border: 2px solid black;
 
     img {
-        width: 80%;
-        margin-top: 3%;
-        border-radius: 10px;
-        border: 2px solid black;
+        width 80%
+        margin-top: 1%
     }
     `;
 
