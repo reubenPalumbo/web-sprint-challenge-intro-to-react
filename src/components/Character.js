@@ -2,8 +2,7 @@
 import React from "react";
 import styles from "styled-components";
 
-export default function Character({ name, status, species, img }) {
-  const Main = styles.div`
+const Main = styles.div`
     width: 30%;
     display: flex;
     justify-content: center;
@@ -20,6 +19,7 @@ export default function Character({ name, status, species, img }) {
     }
     `;
 
+export default function Character({ name, status, species, img }) {
   return (
     <Main>
       <img src={img} className="img" alt="Character profile"></img>
