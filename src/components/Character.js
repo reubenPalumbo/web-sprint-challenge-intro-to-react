@@ -12,22 +12,31 @@ const Main = styles.div`
     flex-flow: column nowrap; 
     border-radius: 10px;
     margin: 2% 1%;
-
+    border: 2px solid black;
     img {
-        width 80%
-        margin-top: 1%
+        width: 80%;
+        margin-top: 5%;
+        border-radius: 10px;
+        border: 2px solid black;
     }
     `;
-
-export default function Character({ name, status, species, img }) {
+export default function Character({ data }) {
   return (
-    <Main>
-      <img src={img} className="img" alt="Character profile"></img>
-      <div className="box">
-        <h3>Name: {name}</h3>
-        <p>Status: {status}</p>
-        <p>Species: {species}</p>
-      </div>
-    </Main>
+    <>
+      {data.map((item) => {
+        return (
+          <>
+            <Main key={item.id}>
+              <img src={item.img} className="img" alt="Character profile"></img>
+              <div className="box">
+                <h3>Name: {item.name}</h3>
+                <p>Status: {item.status}</p>
+                <p>Species: {item.species}</p>
+              </div>
+            </Main>
+          </>
+        );
+      })}
+    </>
   );
 }
